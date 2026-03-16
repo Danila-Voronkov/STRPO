@@ -29,7 +29,8 @@
     <Folder Include="db\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".env-example" />
+    <Content Include=".env" />
+    <Content Include=".gitignore" />
     <Content Include="backend\Dockerfile" />
     <Content Include="db\init.sql" />
     <Content Include="docker-compose.yml" />
