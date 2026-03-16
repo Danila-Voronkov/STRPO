@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f9af4a0f-1a94-4a94-a9a8-b52efffd46bc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>backend\main.py</StartupFile>
+    <StartupFile>backend\app.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,20 +21,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="backend\main.py" />
+    <Compile Include="backend\app.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="backend\" />
     <Folder Include="frontend\" />
     <Folder Include="db\" />
+    <Folder Include="frontend\static\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".env" />
+    <Content Include=".env-example" />
     <Content Include=".gitignore" />
     <Content Include="backend\Dockerfile" />
+    <Content Include="backend\requirements.txt" />
     <Content Include="db\init.sql" />
     <Content Include="docker-compose.yml" />
     <Content Include="frontend\Dockerfile" />
+    <Content Include="frontend\static\index.html" />
+    <Content Include="frontend\static\script.js" />
+    <Content Include="frontend\static\style.css" />
     <Content Include="readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
