@@ -37,7 +37,7 @@ async function addSensor(event) {
         form.reset();
         loadSensors();
     } else {
-        alert('Ошибка при добавлении');
+        alert('Error');
     }
 }
 
@@ -47,7 +47,7 @@ async function deleteSensor(id) {
         if (response.ok) {
             loadSensors();
         } else {
-            alert('Ошибка при удалении');
+            alert('Error');
         }
     }
 }
