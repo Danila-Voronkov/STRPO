@@ -7,8 +7,7 @@ CREATE TABLE IF NOT EXISTS sensors (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Добавим несколько тестовых записей
 INSERT INTO sensors (name, plant_name, value, unit) VALUES
-    ('Температура', 'Роза', 23.5, '°C'),
-    ('Влажность почвы', 'Кактус', 45.2, '%'),
-    ('Освещённость', 'Фикус', 3200, 'lux');
+    ('1', '1', 23.5, '°C'),
+    ('1', '1', 45.2, '%'),
+    ('1', '1', 3200, 'lux');

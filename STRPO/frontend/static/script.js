@@ -1,4 +1,4 @@
-const API_BASE = '/api';  // через nginx проксируется на бэкенд, либо можно напрямую http://localhost:5000
+п»їconst API_BASE = '/api';
 
 async function loadSensors() {
     const response = await fetch(`${API_BASE}/sensors`);
@@ -14,7 +14,7 @@ async function loadSensors() {
             <td>${sensor.value}</td>
             <td>${sensor.unit}</td>
             <td>${new Date(sensor.created_at).toLocaleString()}</td>
-            <td><button onclick="deleteSensor(${sensor.id})">Удалить</button></td>
+            <td><button onclick="deleteSensor(${sensor.id})">РЈРґР°Р»РёС‚СЊ</button></td>
         `;
     });
 }
@@ -37,17 +37,17 @@ async function addSensor(event) {
         form.reset();
         loadSensors();
     } else {
-        alert('Ошибка при добавлении');
+        alert('РћС€РёР±РєР° РїСЂРё РґРѕР±Р°РІР»РµРЅРёРё');
     }
 }
 
 async function deleteSensor(id) {
-    if (confirm('Удалить датчик?')) {
+    if (confirm('РЈРґР°Р»РёС‚СЊ РґР°С‚С‡РёРє?')) {
         const response = await fetch(`${API_BASE}/sensors/${id}`, { method: 'DELETE' });
         if (response.ok) {
             loadSensors();
         } else {
-            alert('Ошибка при удалении');
+            alert('РћС€РёР±РєР° РїСЂРё СѓРґР°Р»РµРЅРёРё');
         }
     }
 }
